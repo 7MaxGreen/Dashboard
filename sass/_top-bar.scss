@@ -24,13 +24,21 @@
     button{
 border:none;
 
-
+        &:hover,
         &:focus{
             box-shadow: none;
+       }
+
+       &:hover{
+           background-color: transparent;
        }
     }
 }
 
+ span{
+     font-size: 20px;
+     color: $-color--dark;
+ }
 .notify{
     padding: 0 20px;
 

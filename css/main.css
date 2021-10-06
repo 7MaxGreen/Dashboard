@@ -1,12 +1,22 @@
 .sidebar {
   background-color: #37474f;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
+}
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
 }
 .sidebar .nav-item a {
   color: #9ba3a7;
 }
+.sidebar .nav-item span {
+  color: #9ba3a7;
+}
 .sidebar .nav-item:hover a {
+  color: #df468e;
+}
+.sidebar .nav-item:hover span {
   color: #df468e;
 }
 
@@ -14,6 +24,7 @@
   padding: 50px 75px;
   background-color: #f4f4f4;
   margin: 0 -12px;
+  min-height: 100vh;
 }
 
 .heading {
@@ -22,10 +33,79 @@
 
 .tool-body {
   width: 100%;
-  height: 500px;
   background-color: #fff;
   box-shadow: 0 0 20px #37474f;
   margin: 50px 0;
+  padding: 30px;
+}
+
+.color-pickers {
+  display: flex;
+  justify-content: space-between;
+}
+.color-pickers .pick {
+  width: 40px;
+  height: 30px;
+}
+.color-pickers .color-picker-blue .pick:nth-of-type(1) {
+  background-color: #084298;
+}
+.color-pickers .color-picker-blue .pick:nth-of-type(2) {
+  background-color: #0a58ca;
+}
+.color-pickers .color-picker-blue .pick:nth-of-type(3) {
+  background-color: #3d8bfd;
+}
+.color-pickers .color-picker-blue .pick:nth-of-type(4) {
+  background-color: #3db8fd;
+}
+.color-pickers .color-picker-green .pick:nth-of-type(1) {
+  background-color: #13795b;
+}
+.color-pickers .color-picker-green .pick:nth-of-type(2) {
+  background-color: #1aa179;
+}
+.color-pickers .color-picker-green .pick:nth-of-type(3) {
+  background-color: #20c997;
+}
+.color-pickers .color-picker-green .pick:nth-of-type(4) {
+  background-color: #4dd4ac;
+}
+.color-pickers .color-picker-purple .pick:nth-of-type(1) {
+  background-color: #432874;
+}
+.color-pickers .color-picker-purple .pick:nth-of-type(2) {
+  background-color: #59359a;
+}
+.color-pickers .color-picker-purple .pick:nth-of-type(3) {
+  background-color: #6f42c1;
+}
+.color-pickers .color-picker-purple .pick:nth-of-type(4) {
+  background-color: #8c68cd;
+}
+
+.circle-grey {
+  display: flex;
+  flex-wrap: wrap;
+}
+.circle-grey .circle {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.circle-grey .circle:nth-of-type(odd) {
+  background-color: gray;
+}
+.circle-grey .circle:nth-of-type(even) {
+  background-color: lightgray;
+}
+
+.customer-avatar {
+  width: 60px;
+  height: 60px;
 }
 
 .top-bar {
@@ -48,8 +128,16 @@
 .search button {
   border: none;
 }
-.search button:focus {
+.search button:hover, .search button:focus {
   box-shadow: none;
+}
+.search button:hover {
+  background-color: transparent;
+}
+
+span {
+  font-size: 20px;
+  color: #37474f;
 }
 
 .notify {
@@ -80,4 +168,62 @@
   border-left: 2px solid #9ba3a7;
   color: #9ba3a7;
   padding: 0 20px;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?g08ljw");
+  src: url("../fonts/icomoon.eot?g08ljw#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?g08ljw") format("truetype"), url("../fonts/icomoon.woff?g08ljw") format("woff"), url("../fonts/icomoon.svg?g08ljw#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dashboard:before {
+  content: "\e900";
+}
+
+.icon-activity:before {
+  content: "\e901";
+}
+
+.icon-box:before {
+  content: "\e902";
+}
+
+.icon-calendar:before {
+  content: "\e903";
+}
+
+.icon-clock:before {
+  content: "\e904";
+}
+
+.icon-cogwheel:before {
+  content: "\e905";
+}
+
+.icon-search:before {
+  content: "\e906";
+}
+
+.icon-dialog:before {
+  content: "\e907";
+}
+
+.icon-notifications-outline:before {
+  content: "\e908";
 }
